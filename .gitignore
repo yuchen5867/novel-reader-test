@@ -1,0 +1,11 @@
+node_modules/
+*.db
+*.db-wal
+*.db-shm
+backend/uploads/novels/
+backend/uploads/temp/
+.env
+*.log
+.DS_Store
+Thumbs.db
+dist/

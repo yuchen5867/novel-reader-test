@@ -1,0 +1,24 @@
+{
+  "name": "novel-reader-backend",
+  "version": "1.0.0",
+  "description": "Novel Reader Backend API Server",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "dev": "node --watch src/main.js"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.10",
+    "archiver": "^6.0.1",
+    "better-sqlite3": "^11.0.0",
+    "compression": "^1.8.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-rate-limit": "^8.4.1",
+    "iconv-lite": "^0.6.3",
+    "jschardet": "^3.1.0",
+    "morgan": "^1.10.1",
+    "multer": "^1.4.5-lts.1",
+    "uuid": "^9.0.0"
+  }
+}
