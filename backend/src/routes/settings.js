@@ -12,7 +12,7 @@ const router = express.Router();
 const uploadsDir = process.env.UPLOAD_PATH || path.join(__dirname, '..', '..', 'uploads');
 
 // Get all settings (never expose passwords)
-router.get('/', (req, res) => {
+router.get('/settings', (req, res) => {
   const settings = db.prepare('SELECT * FROM settings').all();
   const result = {};
   for (const s of settings) {
@@ -28,7 +28,7 @@ router.get('/', (req, res) => {
 });
 
 // Update settings
-router.put('/', authMiddleware, (req, res) => {
+router.put('/settings', authMiddleware, (req, res) => {
   const settings = req.body;
   const stmt = db.prepare('INSERT OR REPLACE INTO settings (key, value) VALUES (?, ?)');
   const updateMany = db.transaction((settings) => {
